@@ -1,6 +1,5 @@
 {
-  "waybackUrl": "https://veidemann.local/loke/nb/",
   "authConfig": {
-    "redirectUri": "https://veidemann.local/veidemann/"
+    "redirectUri": "https://veidemann.test/veidemann/"
   }
 }

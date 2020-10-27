@@ -4,7 +4,7 @@ resources:
   - namespace.yaml
   - ../cert
   - redis_frontier.yaml
-  - ../../../bases/dex
+  - ../dex
   - ../../../bases/rethinkdb
   - ../../../bases/prometheus-exporter
   - ../../../bases/veidemann-db-initializer
@@ -71,8 +71,6 @@ configMapGenerator:
   - name: veidemann
     files:
       - log4j2.xml
-    literals:
-      - openidConnectIssuer=https://veidemann.local/dex
   - name: veidemann-version
     literals:
       - versions.json={"veidemann":"dev"}

@@ -1,15 +1,15 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: jaeger-ingressroute
+  name: dex-ingressroute
 spec:
   entryPoints:
     - web
     - websecure
   routes:
-    - match: PathPrefix(`/jaeger`)
+    - match: PathPrefix(`/dex`)
       kind: Rule
       services:
-        - name: jaeger-query
-          port: 16686
+        - name: dex
+          port: 32000
   tls: {}

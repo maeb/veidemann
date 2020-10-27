@@ -24,10 +24,10 @@ cat <<EOF >minikube_ip_patch.yaml
           hostAliases:
             - ip: $(minikube ip)
               hostnames:
-                - veidemann.local
+                - veidemann.test
 EOF
 
-$UPDATE_HOSTS veidemann.local $LOCAL_IP
+$UPDATE_HOSTS veidemann.test $LOCAL_IP
 
 echo "Waiting for nodes to be ready"
 kubectl wait --for=condition=Ready nodes --all --timeout=5m

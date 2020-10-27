@@ -17,35 +17,30 @@ spec:
     - web
     - websecure
   routes:
-    - match: Host(`veidemann.local`) && PathPrefix(`/dex`)
-      kind: Rule
-      services:
-        - name: dex
-          port: 32000
-    - match: Host(`veidemann.local`) && PathPrefix(`/veidemann.api`)
+    - match: PathPrefix(`/veidemann.api`)
       kind: Rule
       services:
         - name: veidemann-controller
           port: 7700
           scheme: h2c
-    - match: Host(`veidemann.local`) && PathPrefix(`/grpc-web`)
+    - match: PathPrefix(`/grpc-web`)
       kind: Rule
       middlewares:
         - name: grpcweb-stripprefix
       services:
         - name: veidemann-controller
           port: 10000
-    - match: Host(`veidemann.local`) && PathPrefix(`/veidemann`)
+    - match: PathPrefix(`/veidemann`)
       kind: Rule
       services:
         - name: veidemann-dashboard
           port: 80
-    - match: Host(`veidemann.local`) && PathPrefix(`/validator/api`)
+    - match: PathPrefix(`/validator/api`)
       kind: Rule
       services:
         - name: veidemann-warcvalidator-api
           port: 3000
-    - match: Host(`veidemann.local`) && PathPrefix(`/health`)
+    - match: PathPrefix(`/health`)
       kind: Rule
       services:
         - name: veidemann-health-check-api

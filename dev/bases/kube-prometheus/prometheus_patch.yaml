@@ -4,7 +4,7 @@ metadata:
   name: k8s
   namespace: monitoring
 spec:
-  externalUrl: https://veidemann.local/prometheus
+  externalUrl: https://veidemann.test/prometheus
   enableAdminAPI: true
   replicas: 1
   resources:

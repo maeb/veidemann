@@ -1,4 +1,4 @@
-issuer: https://example.com/dex
+issuer: https://veidemann.test/dex
 storage:
   config:
     inCluster: true
@@ -10,8 +10,7 @@ logger:
 web:
   http: 0.0.0.0:5556
   allowedOrigins:
-    - https://example.com
-    - https://localhost:4200
+    - "*"
 
 oauth2:
   alwaysShowLoginScreen: false
@@ -25,7 +24,7 @@ staticClients:
   - id: veidemann-dashboard
     name: Veidemann Admin Dashboard
     redirectURIs:
-      - https://example.com/veidemann/
+      - https://veidemann.test/veidemann/
       - https://localhost:4200/veidemann
     secret: ZXhhbXBsZS1hcHAtc2VjcmV0
   - id: veidemann-cli

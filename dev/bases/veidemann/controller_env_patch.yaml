@@ -9,7 +9,7 @@ spec:
         - name: veidemann-controller
           env:
             - name: OPENID_CONNECT_ISSUER
-              value: https://veidemann.local/dex
+              value: https://veidemann.test/dex
             - name: DB_HOST
               value: $(DB_SERVICE_NAME)
             - name: FRONTIER_HOST

@@ -20,10 +20,10 @@ cat <<EOF >kind_ip_patch.yaml
           hostAliases:
             - ip: ${LOCAL_IP}
               hostnames:
-                - veidemann.local
+                - veidemann.test
 EOF
 
-$UPDATE_HOSTS veidemann.local $LOCAL_IP
+$UPDATE_HOSTS veidemann.test $LOCAL_IP
 
 set -e
 
